@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Login</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <div id="login_div" class="main-div">
+    <h3>Login to Account</h3>
+    <input type="email" placeholder="Email" id="email_field" />
+    <input type="password" placeholder="Password" id="password_field" />
+
+    <button onclick="login()">Login</button>
+  </div>
+
+  <div id="user_div" class="loggedin-div">
+    <h3>Welcome User</h3>
+    <span><b>Email: </b></span>
+    <span id="user_email"></span>
+    <p></p>
+    <span><b>Password: </b></span>
+    <span id="user_password"></span>
+    <p></p>
+    <span><b>Name: </b></span>
+    <span id="user_name"></span>
+    <p></p>
+    <span><b>Birth Date: </b></span>
+    <span id="user_birth"></span>
+    <p></p>
+    <span><b>Adress: </b></span>
+    <span id="user_adress"></span>
+    <button onclick="logout()">Logout</button>
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+  <script>
+    var firebaseConfig = {
+      apiKey: "AIzaSyDqm6IV-HHJd8uWUSIXoDDeuCCs8lJOutM",
+      authDomain: "login-firebase-4655f.firebaseapp.com",
+      projectId: "login-firebase-4655f",
+      storageBucket: "login-firebase-4655f.appspot.com",
+      messagingSenderId: "162981690741",
+      appId: "1:162981690741:web:2a1b3ac94fda91895a273c",
+      measurementId: "G-33VFQ8T5LG"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+  </script>
+  <script src="index.js"></script>
+
+</body>
+
+</html>
